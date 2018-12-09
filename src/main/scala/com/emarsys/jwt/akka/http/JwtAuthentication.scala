@@ -25,6 +25,10 @@ trait JwtAuthentication {
 
   def jwtAuthenticate[UserData](um: FromStringUnmarshaller[UserData]): Directive1[UserData] = for {
     jwtToken <- optionalHeaderValueByName("Authorization").map(stripBearerPrefix)
+    userData <- jwtAuthenticateToken(jwtToken, um)
+  } yield userData
+
+  def jwtAuthenticateToken[UserData](jwtToken: Option[String], um: FromStringUnmarshaller[UserData]): Directive1[UserData] = for {
     authorizedToken <- checkAuthorization(jwtToken)
     decodedToken <- decodeToken(authorizedToken)
     userData <- convertToUserData(decodedToken, um)
