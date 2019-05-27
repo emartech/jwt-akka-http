@@ -7,7 +7,7 @@ This is a scala library for akka-http that indroduces a directive to make JWT au
 
 Add the following to `build.sbt`:
 ```scala
-libraryDependencies += "com.emarsys" %% "jwt-akka-http" % "1.0.1"
+libraryDependencies += "com.emarsys" %% "jwt-akka-http" % "1.0.1+6-9e96f102"
 ```
 
 In your code import and mixin the `com.emarsys.authentication.jwt.JwtAuthentication` trait and override its `jwtConfig` member with a valid configuration.
