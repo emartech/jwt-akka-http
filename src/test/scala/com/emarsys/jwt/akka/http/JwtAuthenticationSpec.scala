@@ -7,15 +7,17 @@ import akka.http.scaladsl.server.AuthenticationFailedRejection
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.testkit.ScalatestRouteTest
 import com.typesafe.config.{Config, ConfigFactory}
-import org.scalatest.words.ShouldVerb
-import org.scalatest.{Inside, Matchers, WordSpec}
+import org.scalatest.Inside
 import pdi.jwt.{Jwt, JwtClaim}
 import spray.json._
 
 import scala.util.Success
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.verbs.ShouldVerb
+import org.scalatest.wordspec.AnyWordSpec
 
 class JwtAuthenticationSpec
-    extends WordSpec
+    extends AnyWordSpec
     with Matchers
     with ShouldVerb
     with JwtAuthentication
