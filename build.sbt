@@ -16,9 +16,9 @@ scalacOptions ++= Seq(
 )
 
 libraryDependencies ++= {
-  val akkaV  = "2.6.9"
+  val akkaV  = "2.6.12"
   val akkaHttpV  = "10.2.3"
-  val scalaTestV = "3.2.2"
+  val scalaTestV = "3.2.3"
   Seq(
     "com.typesafe.akka" %% "akka-http"            % akkaHttpV,
     "com.typesafe.akka" %% "akka-http-testkit"    % akkaHttpV % Test,
@@ -26,7 +26,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-stream-testkit"  % akkaV % Test,
     "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpV,
     "org.scalatest"     %% "scalatest"            % scalaTestV % Test,
-    "com.pauldijou"     %% "jwt-core"             % "4.3.0"
+    "com.pauldijou"     %% "jwt-core"             % "5.0.0"
   )
 }
 
