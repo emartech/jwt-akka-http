@@ -16,7 +16,7 @@ scalacOptions ++= Seq(
 )
 
 libraryDependencies ++= {
-  val akkaV  = "2.6.14"
+  val akkaV  = "2.6.15"
   val akkaHttpV  = "10.2.4"
   val scalaTestV = "3.2.9"
   Seq(
