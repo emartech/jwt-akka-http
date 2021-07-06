@@ -26,7 +26,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-stream-testkit"  % akkaV % Test,
     "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpV,
     "org.scalatest"     %% "scalatest"            % scalaTestV % Test,
-    "com.github.jwt-scala"     %% "jwt-core"             % "6.0.0"
+    "com.github.jwt-scala"     %% "jwt-core"             % "8.0.2"
   )
 }
 
